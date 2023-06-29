@@ -1,6 +1,6 @@
 ## Mixing
 
-Marlin lets set the mixing factors like so:  
+Marlin lets you set the mixing factors like so:  
 **M165 A0.2 B0.2 C0.2 D0.2 H0.2**   
 You can also store mixing factors in virtual tools with **M164 S\<toolnumber\>** or directly send them in G1 move commands, see: [https://github.com/MarlinFirmware/Marlin/issues/6412](https://github.com/MarlinFirmware/Marlin/issues/6412#issuecomment-296389484)  
 After storing them you acess them by sending T0, T1.. ect. 
