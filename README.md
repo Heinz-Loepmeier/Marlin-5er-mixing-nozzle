@@ -1,9 +1,14 @@
 ## Mixing
 
-Marlin lets you vary the extrusion ratio by sending:  
-**M165 A0.2 B0.2 C0.2 D0.2 G0.2**   
-Here is the mapping of the extrusion letter (note that they start with A, but E and F are skipped/already used) and motor connector on the Octopus_v1.1 board.
-![ocotpus1 1v](https://github.com/Heinz-Loepmeier/Marlin-5er-mixing-nozzle/assets/17910445/3cceb8af-1740-430b-a229-abe182113736)
+Marlin lets set the mixing factors like so:  
+**M165 A0.2 B0.2 C0.2 D0.2 H0.2**   
+You can also store mixing factors in virtual tools with **M164 S\<toolnumber\>** or directly send them in G1 move commands, see: [https://github.com/MarlinFirmware/Marlin/issues/6412](https://github.com/MarlinFirmware/Marlin/issues/6412#issuecomment-296389484)  
+After storing them you acess them by sending T0, T1.. ect. 
+
+
+Here is the mapping of the extrusion letter and motor connector on the Octopus_v1.1 board. (note that they start with A, but E, F and G are skipped/already used) 
+
+![ocotpus1 1v](https://github.com/Heinz-Loepmeier/Marlin-5er-mixing-nozzle/assets/17910445/a99aebf4-364e-4dc6-80f2-db4ab319909d)
 
 
 If you have less then 5 extruders, change config.h to the number of extruders: **#define MIXING_STEPPERS 5**  
