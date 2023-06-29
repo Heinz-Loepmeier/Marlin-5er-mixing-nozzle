@@ -1,3 +1,16 @@
+## Mixing
+
+Marlin lets you vary the extrusion ratio by sending:  
+**M165 A0.2 B0.2 C0.2 D0.2 G0.2**   
+Here is the mapping of the extrusion letter (note that they start with A, but E and F are skipped/already used) and motor connector on the Octopus_v1.1 board.
+![ocotpus1 1v](https://github.com/Heinz-Loepmeier/Marlin-5er-mixing-nozzle/assets/17910445/3cceb8af-1740-430b-a229-abe182113736)
+
+
+If you have less then 5 extruders, change config.h to the number of extruders: **#define MIXING_STEPPERS 5**  
+Rest is configured for a Fysetc Mini 12864 LCD Display V2.1, TMC2209, sensorless hooming (XYZ), Z_max homing, 14teeth Gt2 pulleys (XYZ)..
+
+
+
 <p align="center"><img src="buildroot/share/pixmaps/logo/marlin-outrun-nf-500.png" height="250" alt="MarlinFirmware's logo" /></p>
 
 <h1 align="center">Marlin 3D Printer Firmware</h1>
