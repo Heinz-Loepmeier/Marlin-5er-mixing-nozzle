@@ -1,18 +1,23 @@
 ## Mixing
 
-Marlin lets you set the mixing factors like so:  
-**M165 A0.2 B0.2 C0.2 D0.2 H0.2**   
-You can also store mixing factors in virtual tools with **M164 S\<toolnumber\>** or directly send them in G1 move commands, see: [https://github.com/MarlinFirmware/Marlin/issues/6412](https://github.com/MarlinFirmware/Marlin/issues/6412#issuecomment-296389484)  
-After storing them you acess them by sending T0, T1.. ect. 
+The following G-code command sets the extruder mixing ratios:  
+**M165 A0.2 B0.2 C0.2 D0.2 H0.2**
+There are more ways to set these, see  
+[https://github.com/MarlinFirmware/Marlin/issues/6412](https://github.com/MarlinFirmware/Marlin/issues/6412#issuecomment-296389484)  
 
+Though it says the mixing factors must add up to 1, on an initial test **M165 A1 B1** also works to define a 50/50 mixture of extruder0 and extruder1. 
+ 
 
-Here is the mapping of the extrusion letter and motor connector on the Octopus_v1.1 board. (note that they start with A, but E, F and G are skipped/already used) 
+<br>
+<br>
+<br>
+Here is the mapping of the extrusion letter and motor connector on an Octopus_v1.1 board. (note that they start with A, but E, F and G are skipped/already used) 
 
 ![ocotpus1 1v](https://github.com/Heinz-Loepmeier/Marlin-5er-mixing-nozzle/assets/17910445/a99aebf4-364e-4dc6-80f2-db4ab319909d)
 
 
 If you have less then 5 extruders, change config.h to the number of extruders: **#define MIXING_STEPPERS 5**  
-Rest is configured for a Fysetc Mini 12864 LCD Display V2.1, TMC2209, sensorless hooming (XYZ), Z_max homing, 14teeth Gt2 pulleys (XYZ)..
+Rest is configured for a Fysetc Mini 12864 LCD Display V2.1, TMC2209, sensorless hooming (XYZ), Z_max homing, no heated bed, 14teeth Gt2 pulleys (XYZ)..
 
 
 
